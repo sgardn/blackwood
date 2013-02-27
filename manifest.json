@@ -1,0 +1,17 @@
+{
+  "name": "Bridge scripts n shit, yo.",
+  "version": "1.0",
+  "manifest_version" : 2,
+  "description": "Download some bridge shit.",
+  "browser_action": {
+    "default_icon": "card.jpeg",
+    "popup": "popup.html"
+  }, 
+  "content_scripts" : [
+  {
+	    "matches" : ["http://bridgespot.com/*"],
+	    "js": [ "./scripts/jquery-1.6.2.min.js", "./scripts/inject.js"],
+	    "run_at": "document_end"
+  }
+  ]
+}

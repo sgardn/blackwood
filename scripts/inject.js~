@@ -1,0 +1,17 @@
+var somefun = function(){
+    var buttonScript = function(){
+	//console.log("defining button scripts");
+
+    }
+    buttonScript();
+    
+};
+
+var injectedScript = document.createElement('script');
+injectedScript.type = 'text/javascript';
+injectedScript.text = '('+somefun+')("")';
+
+(document.body || document.head).appendChild(injectedScript);
+console.log("ScRiPt . . . ");
+console.log(injectedScript);
+console.log(" . . . injected");
